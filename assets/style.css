@@ -1,3 +1,96 @@
 .ma-photo{
     height: 20px;
 }
+
+.profile-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.project-container {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.project-image {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.project-description {
+    padding: 15px;
+}
+
+.project-description h4 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.project-description ul {
+    margin-left: 20px;
+}
+
+.project-description li {
+    margin-bottom: 8px;
+}
+
+@media screen and (min-width: 768px) {
+    .project-content {
+        flex-direction: row;
+    }
+    
+    .project-image {
+        flex: 1;
+    }
+    
+    .project-description {
+        flex: 2;
+    }
+}
+
+/* Correction des bordures du menu de navigation */
+#header nav ul {
+    border: 1px solid #fff !important;
+    border-radius: 8px !important;
+    padding: 0;
+}
+#header nav ul li {
+    border-left: none !important;
+}
+#header nav ul li a {
+    margin: 0 !important;
+    border-radius: 0 !important;
+    border-left: 1px solid #fff;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    border-right: none;
+    background: rgba(255,255,255,0.08);
+    transition: background 0.2s, color 0.2s;
+}
+#header nav ul li:first-child a {
+    border-left: 1px solid #fff;
+    border-radius: 8px 0 0 8px !important;
+}
+#header nav ul li:last-child a {
+    border-right: 1px solid #fff;
+    border-radius: 0 8px 8px 0 !important;
+}
+#header nav ul li a:hover {
+    background: rgba(255,255,255,0.18);
+    color: #222;
+}
+#header nav.use-middle:after {
+    display: none !important;
+}

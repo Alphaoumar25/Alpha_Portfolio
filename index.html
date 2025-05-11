@@ -12,6 +12,12 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<link rel="stylesheet" href="assets\style.css">
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+		<script type="text/javascript">
+			(function() {
+				emailjs.init("YOUR_PUBLIC_KEY"); // Vous devrez remplacer ceci par votre clé publique EmailJS
+			})();
+		</script>
 	</head>
 	<body class="is-preload">
 
@@ -19,18 +25,16 @@
 			<div id="wrapper">
 				<!-- Header -->
 					<header id="header">
-						<img src="images\IMG_4575.jpeg" alt="" style="width: 100px; height: 100px; border-radius: 50%;border: 2px solid white;">
-
-						<!-- <div class="logo">
-							<span class="ma-photo"><img src="images\IMG_4575.jpeg" alt="" style="width: 70px; height: 70px; border-radius: 50%;border: 2px solid white;"></span>
-						</div> -->
+						<div class="profile-image">
+							<img src="images/Profile2.jpeg" alt="" style="width: 130px; height: 130px; border-radius: 50%; border: 2px solid white; margin-bottom: 20px;">
+						</div>
 						<div class="content">
 							<div class="inner">
 								<h1>Alpha Oumar Keita</h1>
-								<p>Information Technology student with experience in bilingual support and operations
-									management. Skilled in technical problem-solving, with advanced competencies in networking and 
-									systems administration. Currently an IT tutor, with a particular interest in cybersecurity,
-									network administration, systems, and application development.</p>
+								<p>🎓 Final-year IT student | Bilingual support | Future Cybersecurity & Cloud Admin<br>
+								Graduating soon in Information Technology, with hands-on experience in bilingual technical support, network/system administration, and IT tutoring. I enjoy simplifying complex tech concepts, solving problems, and helping others grow.<br>
+								Passionate about cybersecurity, virtualization, and cloud computing, I'm now looking to kick-start my career and gain real-world experience in the IT field.<br>
+								<strong>Let's connect!</strong></p>
 							</div>
 						</div>
 						<nav>
@@ -38,6 +42,7 @@
 								<li><a href="#Skills">Skills</a></li>
 								<li><a href="#Experience">Professional Experience</a></li>
 								<li><a href="#Tutoring">Tutoring Experience</a></li>
+								<li><a href="#Projects">Projects</a></li>
 								<li><a href="#Education">Education</a></li>
 								<li><a href="#Contact">Contact</a></li>
 								<!--<li><a href="#elements">Elements</a></li>-->
@@ -102,21 +107,33 @@
 							<!-- Tutoring Experience -->
 							<article id="Tutoring">
 								<h2 class="major">Tutoring Experience</h2>
-								<span class="image main"><img src="https://cdn.pixabay.com/photo/2014/08/01/01/58/coach-407290_1280.jpg" alt="" /></span>
-								<h3>Group Tutor in Computer Networking │ September 2023 – Present</h3>
-								<i>Saint Boniface, Winnipeg, Manitoba, Canada</i>
+								<span class="image main"><img src="images/Tutorat.jpeg" alt="" /></span>
+								<h3>Group Tutor in Cybersecurity │ January 2025 – April 2025</h3>
+								<i>Saint Boniface University, Winnipeg, Manitoba, Canada</i>
 								<ul>
-									<li>Guide first-year students in mastering fundamental networking concepts and simulate configurations using Packet Tracer.</li>
-									<li>Perform advanced configurations of network devices, both on physical machines and in virtual simulations.</li>
-									<li>Teach best practices for the installation, configuration, deployment, and use of a computer network.</li>
+									<li>Guide first-year students in understanding the fundamentals of cybersecurity and good security practices.</li>
+									<li>Introduce and demonstrate the use of various cybersecurity tools, including Wireshark, Nmap, Zenmap, and other Kali Linux utilities for scanning, spoofing, sniffing, and network analysis.</li>
+									<li>Raise awareness about common cyber threats and share best practices to avoid phishing attacks, malware infections, and other security risks.</li>
+									<li>Support students in learning about system updates, patch management, and basic security configurations to strengthen their security posture.</li>
 								</ul>
-								<h3>Group Tutor in JavaScript Programming │ September 2023 – Present</h3>
+								<hr />
+								<h3>Group Tutor in Networks Configurations │ September 2024 – April 2025</h3>
+								<i>Saint Boniface University, Winnipeg, Manitoba, Canada</i>
+								<ul>
+									<li>Guide first-year students in mastering fundamental networking concepts and simulating configurations using Packet Tracer.</li>
+									<li>Perform advanced configuration of network devices, on both physical and virtual machines.</li>
+									<li>Teach best practices for installing, configuring, deploying and using a computer network.</li>
+								</ul>
+								<hr />
+								<h3>Group Tutor in JavaScript Programming │ September 2024 – December 2024</h3>
 								<i>Saint-Boniface University, Winnipeg, Manitoba, Canada</i>
 								<ul>
-									<li>Introduce JavaScript programming to beginner students, covering the fundamentals of programming logic.</li>
-									<li>Develop interactive projects using object-oriented concepts, including collision management, graphic animations, and keyboard interactions.</li>
+									<li>Introduce JavaScript programming to beginner students, covering the basics of programming logic.</li>
+									<li>Develop interactive projects using object-oriented concepts, with collision management, graphical animation and keyboard interaction.</li>
 								</ul>
 							</article>
+
+							<hr />
 
 							<!-- Education -->
 
@@ -133,31 +150,120 @@
 						<!-- Contact -->
 							<article id="Contact">
 								<h2 class="major">Contact</h2>
-								<form method="post" action="#">
+								<form method="POST" action="https://formsubmit.co/alphaoumark5@gmail.com">
 									<div class="fields">
 										<div class="field half">
 											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
+											<input type="text" name="name" id="name" required />
 										</div>
 										<div class="field half">
 											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
+											<input type="email" name="email" id="email" required />
 										</div>
 										<div class="field">
 											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="4"></textarea>
+											<textarea name="message" id="message" rows="4" required></textarea>
 										</div>
 									</div>
 									<ul class="actions">
 										<li><input type="submit" value="Send Message" class="primary" /></li>
 										<li><input type="reset" value="Reset" /></li>
 									</ul>
+									<input type="hidden" name="_subject" value="New Portfolio Contact!">
+									<input type="hidden" name="_template" value="table">
+									<input type="hidden" name="_captcha" value="false">
 								</form>
 								<ul class="icons">
-									<i class="fa fa-linkedin" style="font-size:24px"></i>
-									<li><a href="#" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
-									<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="https://www.linkedin.com/in/alpha-oumar-keita-41262a237/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+									<li><a href="https://github.com/AlphaOumarK" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 								</ul>
+							</article>
+
+						<!-- Projects -->
+							<article id="Projects">
+								<h2 class="major">Projects</h2>
+								<span class="image main"><img src="images/IT Projects.jpg" alt="" /></span>
+								
+								<div class="project-container">
+									<h3>Smart Parking System – AI-based Parking Management</h3>
+									<div class="project-image">
+										<img src="images/Detection.png" alt="AI Detection Smart Parking" style="max-width: 100%; border-radius: 8px; margin-bottom: 10px;" />
+									</div>
+									<p>
+										<strong>Innovative AI-Powered Detection:</strong><br>
+										Unlike traditional parking systems that rely on physical sensors, this project uses computer vision and artificial intelligence to detect available and occupied spots in real time, simply by analyzing camera feeds. This approach reduces hardware costs, simplifies installation, and enables advanced analytics.
+									</p>
+									<h4>Key Features</h4>
+									<ul>
+										<li><strong>Real-Time Monitoring:</strong> Visual display of parking spot status (green = free, red = occupied), automatic updates every 5 seconds</li>
+										<li><strong>Reservation System:</strong> Book a spot in advance, real-time availability check, email/SMS confirmation</li>
+										<li><strong>User-Friendly Interface:</strong> Intuitive dashboard, color-coded map</li>
+									</ul>
+									<h4>Technical Stack</h4>
+									<ul>
+										<li><strong>AI & Detection:</strong> Python (OpenCV, TensorFlow/PyTorch)</li>
+										<li><strong>Backend:</strong> Node.js (Express), Firestore (Firebase)</li>
+										<li><strong>Notifications:</strong> Email (Nodemailer), SMS (Twilio)</li>
+										<li><strong>Frontend:</strong> React (TypeScript), Tailwind CSS, Material-UI</li>
+									</ul>
+									<div class="project-image" style="margin-top: 10px; text-align: center;">
+										<img src="images/Architecture Parking.png" alt="Project Architecture" style="max-width: 90%; border-radius: 8px; margin-bottom: 10px;" />
+										<div style="font-size: 0.95em; color: #ccc; margin-top: 5px;">System Architecture</div>
+									</div>
+									<div class="project-image" style="margin-top: 10px; text-align: center;">
+										<img src="images/User Interface.png" alt="User Interface Smart Parking" style="max-width: 90%; border-radius: 8px;" />
+										<div style="font-size: 0.95em; color: #ccc; margin-top: 5px;">User Interface Example</div>
+									</div>
+								</div>
+
+								<hr />
+
+								<div class="project-container">
+									<h3>Certificate & SSO Integration – ADFS with PHP Web App</h3>
+									<div class="project-image" style="text-align: center;">
+										<img src="images/Projet Certificats.jpeg" alt="ADFS Certificate Project" style="max-width: 90%; border-radius: 8px; margin-bottom: 10px;" />
+									</div>
+									<p><strong>🛠️ Project:</strong> Integration of ADFS with a PHP Web Application on IIS<br>
+									As part of my advanced learning in infrastructure and security, I completed a full implementation of Active Directory Federation Services (ADFS) to enable Single Sign-On (SSO) for a PHP web application hosted on a non-domain server.</p>
+									<h4>🎯 Objective</h4>
+									<p>Allow a domain user to authenticate via ADFS on an external web application, without the app being joined to the Active Directory domain.</p>
+									<h4>🔧 Environment</h4>
+									<ul>
+										<li>ADDS, ADFS, ADCS (PKI) on multiple servers across three simulated sites (Winnipeg, Toronto, Ottawa)</li>
+										<li>Non-domain web server (SVRWEB) on IIS</li>
+										<li>Inter-site routing and custom DNS configuration</li>
+										<li>Simple PHP app (with WS-Federation redirection) on IIS</li>
+									</ul>
+									<h4>⚙️ Key Steps</h4>
+									<ul>
+										<li>Setup of a root and subordinate certification authority</li>
+										<li>Enabled secure LDAPS protocol for Active Directory</li>
+										<li>Configured ADFS with KDS key and SSL certificate signed by internal CA</li>
+										<li>Established trust relationship between ADFS and the web app</li>
+										<li>Installed PHP 8.2 with FastCGI on IIS</li>
+										<li>HTTPS link via manually generated certificate deployed through /certsrv</li>
+										<li>Implemented ADFS redirection in the PHP app</li>
+										<li>Full test from a non-domain client workstation</li>
+									</ul>
+									<h4>✅ Result</h4>
+									<p>A domain user can access the web app hosted on SVRWEB via:<br>
+									<code>https://webapp.alag.local/</code><br>
+									and authenticate securely through ADFS, with automatic redirection and custom post-login display.</p>
+									<h4>🧠 Technical Challenges Overcome</h4>
+									<ul>
+										<li>IIS configuration errors (500.19), certificate issues (unsecured)</li>
+										<li>DNS resolution between domain and external machines</li>
+										<li>Manual certificate requests via /certsrv web interface</li>
+										<li>Fine-tuned NTFS permissions and required IIS modules (FastCGI, URL Rewrite)</li>
+									</ul>
+									<h4>📌 Skills Developed</h4>
+									<ul>
+										<li>ADFS integration and web access security</li>
+										<li>Windows Server administration (AD, ADFS, IIS, PKI)</li>
+										<li>Certificate and GPO management</li>
+										<li>Secure PHP web deployment in an enterprise environment</li>
+									</ul>
+								</div>
 							</article>
 
 						<!-- Elements -->
@@ -420,6 +526,28 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				function sendEmail(e) {
+					e.preventDefault();
+					
+					const templateParams = {
+						from_name: document.getElementById('name').value,
+						from_email: document.getElementById('email').value,
+						message: document.getElementById('message').value,
+						to_email: 'alphaoumark5@gmail.com'
+					};
+
+					emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+						.then(function(response) {
+							alert('Message envoyé avec succès!');
+							document.getElementById('contact-form').reset();
+						}, function(error) {
+							alert('Erreur lors de l\'envoi du message. Veuillez réessayer.');
+						});
+
+					return false;
+				}
+			</script>
 
 	</body>
 </html>

@@ -91,6 +91,170 @@
     background: rgba(255,255,255,0.18);
     color: #222;
 }
+#header nav.use-middle {
+    position: relative;
+}
+
+/* La ligne verticale centrale doit être positionnée exactement après le bouton Projects */
+#header nav.use-middle ul li.is-middle {
+    position: relative;
+}
+
+/* Masquer l'ancien pseudo-élément et la ligne personnalisée */
 #header nav.use-middle:after {
     display: none !important;
+}
+
+#header nav.use-middle .middle-line {
+    display: none;
+}
+
+/* Élargir les boutons Skills et Projects */
+#header nav ul li:nth-child(2) a {
+    min-width: 10rem !important;
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+}
+
+#header nav ul li:nth-child(3) a {
+    min-width: 9.2rem !important;
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+}
+
+/* Réduction de l'espacement entre les paragraphes dans Professional Experience */
+#Experience p {
+    margin-bottom: 1rem !important;
+}
+
+/* Espacement entre les différentes expériences professionnelles */
+#Experience hr {
+    margin: 2rem 0 !important;
+    opacity: 0.5;
+}
+
+/* Réduction de l'espacement entre les paragraphes dans Tutoring Experience */
+#Tutoring p {
+    margin-bottom: 1rem !important;
+}
+
+/* Espacement entre les projets */
+#Projects hr {
+    margin: 2rem 0 !important;
+    opacity: 0.5;
+}
+
+/* Réduction de l'espacement entre les paragraphes dans Projects */
+#Projects p {
+    margin-bottom: 1rem !important;
+}
+
+/* Espacement dans Education */
+#Education h3 {
+    margin-top: 1.5rem !important;
+    margin-bottom: 0.8rem !important;
+}
+
+#Education h3:first-of-type {
+    margin-top: 0 !important;
+}
+
+#Education p {
+    margin-bottom: 1rem !important;
+}
+
+/* Espacement entre les sections dans Education */
+#Education hr {
+    margin: 2rem 0 !important;
+    opacity: 0.5;
+}
+
+/* Espacement entre les éléments de la liste Awards & Distinctions */
+#Education ul li {
+    margin-bottom: 1rem !important;
+}
+
+/* Espacement dans Skills */
+#Skills h3 {
+    margin-top: 1.5rem !important;
+    margin-bottom: 0.8rem !important;
+}
+
+#Skills h3:first-of-type {
+    margin-top: 0 !important;
+}
+
+#Skills ul {
+    margin-bottom: 1.5rem !important;
+}
+
+/* Espacement dans Contact */
+#Contact h2.major {
+    margin-bottom: 0.5rem !important;
+}
+
+#Contact p:first-of-type {
+    margin-top: 0 !important;
+    margin-bottom: 1.5rem !important;
+}
+
+/* Réduction de l'espacement entre les paragraphes d'introduction */
+#header .inner p {
+    margin-bottom: 0.8em;
+}
+
+/* Espacement équilibré pour le titre professionnel */
+#header .inner p:first-of-type {
+    margin-bottom: 1rem;
+}
+
+#header .inner p:last-of-type {
+    margin-bottom: 1.5rem;
+}
+
+/* Réduction de la taille du bouton "Let's connect" */
+#header .inner .button.primary {
+    font-size: 0.7rem;
+    height: 2.4rem;
+    line-height: 2.4rem;
+    padding: 0 1rem 0 1.1rem;
+}
+
+/* Réduction des espacements pour que tout tienne sur une page */
+#wrapper {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+}
+
+#header > * {
+    margin-top: 2rem !important;
+}
+
+#header nav {
+    margin-top: 2.5rem !important;
+}
+
+/* Ajustement de la hauteur de la ligne verticale pour qu'elle s'arrête exactement à la ligne horizontale du bas */
+#header nav:before {
+    height: 2.5rem !important;
+    top: -2.5rem !important;
+}
+
+
+#header .content .inner {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+}
+
+.profile-image {
+    margin-bottom: 15px !important;
+}
+
+#header .inner h1 {
+    margin-bottom: 1.2rem !important;
+}
+
+/* Espacement spécifique pour le titre professionnel - équilibrer avec le nom */
+#header .inner p:first-of-type {
+    margin-bottom: 1rem;
 }
